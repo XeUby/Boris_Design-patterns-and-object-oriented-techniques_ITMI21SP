@@ -44,7 +44,8 @@
             // TODO#8: Test that the created Printer works, by calling the Print method
 
             // TODO#9: Ensure that only one Printer instance is used throughout the application.
-            //         Try to create new Printer object
+            //         Try to create new Printer object and compare the two objects to check,
+            //         that the new printer object is the same instance
 
             // TODO#10: Use Abstract Factory to create different types of exams.
         }
