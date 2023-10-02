@@ -15,22 +15,24 @@ namespace BuilderExercise
 
             var company = new ConstructionCompany();
             HouseBuilder builder;
-
+            House house;
             switch (choice)
             {
                 case "1":
                     builder = new WoodHouseBuilder();
+                    house = company.ConstructWoodenHouse(builder);
                     break;
                 case "2":
-                    builder = new WoodHouseBuilder();
+                    builder = new BrickHouseBuilder();
+                    house = company.ConstrutcBrickHouse(builder);
                     break;
                 default:
                     Console.WriteLine("Invalid choice! Building a default Wooden House.");
                     builder = new WoodHouseBuilder();
+                    house = company.ConstructWoodenHouse(builder);
                     break;
             }
 
-            House house = company.ConstructHouse(builder);
             Console.WriteLine($"Your {builder.GetType().Name.Replace("Builder", "")} is ready:");
             Console.WriteLine(house.ToString());
         }
