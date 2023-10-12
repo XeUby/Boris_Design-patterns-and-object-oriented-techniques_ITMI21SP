@@ -3,7 +3,7 @@ using IteratorAndCompositeExercise.Models;
 
 namespace IteratorAndCompositeExercise.Iterators
 {
-    public class DinerMenuIterator : Iterator
+    public class DinerMenuIterator : IIterator
     {
         MenuItem[] MenuItems;
         int position = 0;

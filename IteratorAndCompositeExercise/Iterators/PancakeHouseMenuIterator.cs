@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace IteratorAndCompositeExercise.Iterators
 {
-    public class PancakeHouseMenuIterator : Iterator
+    public class PancakeHouseMenuIterator : IIterator
     {
         ArrayList MenuItems;
         int position = 0;

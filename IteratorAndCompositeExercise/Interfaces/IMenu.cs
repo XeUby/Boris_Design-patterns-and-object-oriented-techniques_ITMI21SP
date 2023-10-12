@@ -1,7 +1,7 @@
 ﻿namespace IteratorAndCompositeExercise.Interfaces
 {
-    public interface Menu
+    public interface IMenu
     {
-        Iterator CreateIterator();
+        IIterator CreateIterator();
     }
 }

@@ -40,7 +40,7 @@ namespace IteratorAndCompositeExercise.Models
         }
     }
 
-    public class PancakeHouseMenu : Menu
+    public class PancakeHouseMenu : IMenu
     {
         public ArrayList MenuItems { get; set; }
 
@@ -57,14 +57,14 @@ namespace IteratorAndCompositeExercise.Models
             MenuItems.Add(menuItem);
         }
 
-        public Iterator CreateIterator()
+        public IIterator CreateIterator()
         {
             return new PancakeHouseMenuIterator(MenuItems);
         }
     }
 
 
-    public class DinerMenu : Menu
+    public class DinerMenu : IMenu
     {
         private int Max_Items = 6;
         int numberOfItems = 0;
@@ -91,7 +91,7 @@ namespace IteratorAndCompositeExercise.Models
             }
         }
 
-        public Iterator CreateIterator()
+        public IIterator CreateIterator()
         {
             return new DinerMenuIterator(MenuItems);
         }
@@ -100,10 +100,10 @@ namespace IteratorAndCompositeExercise.Models
 
     public class Waitress
     {
-        Menu PancakeHouseMenu;
-        Menu DinerMenu;
+        IMenu PancakeHouseMenu;
+        IMenu DinerMenu;
 
-        public Waitress(Menu pancakeHouseMenu, Menu dinerMenu)
+        public Waitress(IMenu pancakeHouseMenu, IMenu dinerMenu)
         {
             PancakeHouseMenu = pancakeHouseMenu;
             DinerMenu = dinerMenu;
@@ -111,8 +111,8 @@ namespace IteratorAndCompositeExercise.Models
 
         public void PrintMenu()
         {
-            Iterator PancakeIterator = PancakeHouseMenu.CreateIterator();
-            Iterator DinerIterator = DinerMenu.CreateIterator();
+            IIterator PancakeIterator = PancakeHouseMenu.CreateIterator();
+            IIterator DinerIterator = DinerMenu.CreateIterator();
             Console.WriteLine("Menu - breakfast");
             PrintMenu(PancakeIterator);
             Console.WriteLine("Menu - Lunch");
@@ -120,7 +120,7 @@ namespace IteratorAndCompositeExercise.Models
 
         }
 
-        private void PrintMenu(Iterator iterator)
+        private void PrintMenu(IIterator iterator)
         {
             while (iterator.HasNext())
             {
