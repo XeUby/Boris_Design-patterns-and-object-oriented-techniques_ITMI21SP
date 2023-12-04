@@ -19,19 +19,19 @@ namespace BuilderAssignment
             RamenBowl.FinishedBowlOfRamen(misoRamen);
             Console.WriteLine(RamenBowl.FinishedBowlOfRamen(misoRamen));
 
-            // Prepare Vegan Ramen using VeganRamenBuilder
-            RamenBowl veganRamen = chef.PrepareRamen(new VeganRamenBuilder());
+            // Prepare shoyu Ramen using shoyuRamenBuilder
+            RamenBowl shoyuRamen = chef.PrepareRamen(new shoyuRamenBuilder());
             
-            // Display information about the finished Vegan Ramen
-            RamenBowl.FinishedBowlOfRamen(veganRamen);
-            Console.WriteLine(RamenBowl.FinishedBowlOfRamen(veganRamen));
+            // Display information about the finished shoyu Ramen
+            RamenBowl.FinishedBowlOfRamen(shoyuRamen);
+            Console.WriteLine(RamenBowl.FinishedBowlOfRamen(shoyuRamen));
 
-            // Prepare Spicy Ramen using MisoRamenBuilder (Note: It's using the wrong builder, should be SpicyRamenBuilder)
-            RamenBowl spicyRamen = chef.PrepareRamen(new MisoRamenBuilder());
+            // Prepare shio Ramen using shioRamenBuilder 
+            RamenBowl shioRamen = chef.PrepareRamen(new shioRamenBuilder());
             
-            // Display information about the finished Spicy Ramen
-            RamenBowl.FinishedBowlOfRamen(spicyRamen);
-            Console.WriteLine(RamenBowl.FinishedBowlOfRamen(spicyRamen));
+            // Display information about the finished shio Ramen
+            RamenBowl.FinishedBowlOfRamen(shioRamen);
+            Console.WriteLine(RamenBowl.FinishedBowlOfRamen(shioRamen));
         }
     }
 }
