@@ -1,22 +1,28 @@
-﻿using BuilderAssignment.Models;
+using BuilderAssignment.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BuilderAssignment.Builders
 {
-    /// <summary>
-    /// This is an interface represeting the steps to build the ramen bowl
-    /// </summary>
+    // Interface for building a ramen bowl
     public interface IRamenBuilder
     {
-        // TODO#1: Add methods for following steps
-        // - Setting broth
-        // - Setting noodles
-        // - Adding toppings
-        // - Adding Extras
+        // Set the type of broth for the ramen
+        void settingBroth();
 
-        /// <summary>
-        /// Returns the value of build RamenBowl
-        /// </summary>
-        /// <returns></returns>
+        // Set the type of noodle for the ramen
+        void settingNoodle();
+
+        // Add toppings to the ramen
+        void addTopping();
+
+        // Add extra components to the ramen
+        void addExtra();
+
+        // Get the completed ramen bowl
         RamenBowl GetRamen();
     }
 }
